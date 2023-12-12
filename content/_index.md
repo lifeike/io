@@ -33,7 +33,7 @@ feature:
 # services
 services:
   - title: "It is the most advanced digital marketing and it company."
-    content: "Pulse points software was founded in 2012 to provide entrepreneurs with a local partner who could help them build high-quality mobile applications to launch their businesses. In the years since, our customer base has grown to include companies of all sizes in a variety of industries"
+    content: "Pulse point software was founded in 2012 to provide entrepreneurs with a local partner who could help them build high-quality mobile applications to launch their businesses. In the years since, our customer base has grown to include companies of all sizes in a variety of industries"
     images:
       - "/images/service-slide-1.png"
       - "/images/service-slide-2.png"
