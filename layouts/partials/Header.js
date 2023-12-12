@@ -89,7 +89,7 @@ const Header = () => {
                         router.asPath === menu.url ? "nav-link-active" : ""
                       }`}
                     >
-                      {menu.name}
+                      {/* {menu.name} */}
                     </Link>
                   </li>
                 )}
