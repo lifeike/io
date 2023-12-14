@@ -1,10 +1,27 @@
 import config from "@config/config.json";
 import { markdownify } from "@lib/utils/textConverter";
+import emailjs from "@emailjs/browser";
 
 const Contact = ({ data }) => {
   const { frontmatter } = data;
   const { title, info } = frontmatter;
   const { contact_form_action } = config.params;
+  var templateParams = {
+    name: "James",
+    notes: "Check this out!",
+  };
+  const sendEmail = async () => {
+    emailjs
+      .send("service_a1cd0gj", "template_ayvg0w7", templateParams) //use your Service ID and Template ID
+      .then(
+        function (response) {
+          console.log("SUCCESS!", response.status, response.text);
+        },
+        function (error) {
+          console.log("FAILED...", error);
+        }
+      );
+  };
 
   return (
     <section className="section">
@@ -15,7 +32,7 @@ const Contact = ({ data }) => {
             <form
               className="contact-form"
               method="POST"
-              action={contact_form_action}
+              // action={contact_form_action}
             >
               <div className="mb-3">
                 <input
@@ -51,7 +68,11 @@ const Contact = ({ data }) => {
                   placeholder="Your message"
                 />
               </div>
-              <button type="submit" className="btn btn-primary">
+              <button
+                onClick={sendEmail}
+                type="submit"
+                className="btn btn-primary"
+              >
                 Send Now
               </button>
             </form>
