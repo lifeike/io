@@ -14,7 +14,7 @@ feature:
     - name: "Clean Code"
       icon: "/images/code.svg"
       content: "Easy to read, maintain, understand and change through structure and consistency yet remains robust and secure to withstand performance demands"
-    - name: "Flexible infrastructure"
+    - name: "Flexible Infrastructure"
       icon: "/images/oop.svg"
       content: "We can flexibly setup Internet architecture and programming technology according to customer requirements."
     - name: "24h Service"
