@@ -43,9 +43,7 @@ We believe that the key to good design is to take things that are difficult to w
       link: /contact
 
   - title: "Planning"
-    content: "Before creating designs and writing code it is important that everybody is on the same page in terms of what exactly is being built.
-
-A complete plan of the project is created covering every aspect of the design, from the database to the user interfaces. This means that even if the project doesn’t move ahead with us, you have a plan of your system you can take to any development team and they will know exactly what to do."
+    content: "Before creating designs and writing code it is important that everybody is on the same page in terms of what exactly is being built.A complete plan of the project is created covering every aspect of the design, from the database to the user interfaces."
     images:
       - "/images/service-slide-2.png"
     button:
@@ -66,9 +64,8 @@ This means that we can move quickly but we also have regular delivery deadlines 
 
   - title: "Development standards and quality assurance"
     content: "We’re also very strict on working to the industry development standards shared by all high performing development teams.
-It’s important to us as masters of our trade, that you get a well-built system with the correct architectural design.
 
-This protects your investment as you will be free to take the project to any software development agency and they will be able to see exactly how the system works and seamlessly take on new development, not that you will ever need to look anywhere else!"
+This protects your investment as you will be free to take the project to any software development agency and they will be able to see exactly how the system works and seamlessly take on new development!"
     images:
       - "/images/service-slide-1.png"
       - "/images/service-slide-2.png"
