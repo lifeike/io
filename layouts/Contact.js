@@ -12,7 +12,12 @@ const Contact = ({ data }) => {
   };
   const sendEmail = async () => {
     emailjs
-      .send("service_a1cd0gj", "template_ayvg0w7", templateParams) //use your Service ID and Template ID
+      .send(
+        "service_a2hw60c",
+        "template_ayvg0w7",
+        templateParams,
+        "LNIXWNBcWiH30Gpa8"
+      ) //use your Service ID and Template ID and template content and public key
       .then(
         function (response) {
           console.log("SUCCESS!", response.status, response.text);
