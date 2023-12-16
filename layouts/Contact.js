@@ -1,21 +1,24 @@
 import config from "@config/config.json";
 import { markdownify } from "@lib/utils/textConverter";
 import emailjs from "@emailjs/browser";
+import React, { useState } from "react";
 
 const Contact = ({ data }) => {
   const { frontmatter } = data;
   const { title, info } = frontmatter;
   const { contact_form_action } = config.params;
-  var templateParams = {
-    name: "James",
-    notes: "Check this out!",
-  };
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+
   const sendEmail = async () => {
     emailjs
       .send(
         "service_a2hw60c",
         "template_ayvg0w7",
-        templateParams,
+        { name, email, subject, message },
         "LNIXWNBcWiH30Gpa8"
       ) //use your Service ID and Template ID and template content and public key
       .then(
@@ -41,6 +44,8 @@ const Contact = ({ data }) => {
             >
               <div className="mb-3">
                 <input
+                  value={name}
+                  onChange={(event) => setName(event.target.value)}
                   className="form-input w-full rounded"
                   name="name"
                   type="text"
@@ -50,6 +55,8 @@ const Contact = ({ data }) => {
               </div>
               <div className="mb-3">
                 <input
+                  value={email}
+                  onChange={(event) => setEmail(event.target.value)}
                   className="form-input w-full rounded"
                   name="email"
                   type="email"
@@ -59,6 +66,8 @@ const Contact = ({ data }) => {
               </div>
               <div className="mb-3">
                 <input
+                  value={subject}
+                  onChange={(event) => setSubject(event.target.value)}
                   className="form-input w-full rounded"
                   name="subject"
                   type="text"
@@ -68,6 +77,8 @@ const Contact = ({ data }) => {
               </div>
               <div className="mb-3">
                 <textarea
+                  value={message}
+                  onChange={(event) => setMessage(event.target.value)}
                   className="form-textarea w-full rounded-md"
                   rows="7"
                   placeholder="Your message"
