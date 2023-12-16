@@ -13,12 +13,13 @@ const Contact = ({ data }) => {
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
 
+  var templateParams = { name, email, subject, message };
   const sendEmail = async () => {
     emailjs
       .send(
         "service_a2hw60c",
         "template_ayvg0w7",
-        { name, email, subject, message },
+        templateParams,
         "LNIXWNBcWiH30Gpa8"
       ) //use your Service ID and Template ID and template content and public key
       .then(
