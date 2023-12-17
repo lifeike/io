@@ -29,14 +29,19 @@ const Contact = ({ data }) => {
       .then(
         function (response) {
           console.log("SUCCESS!", response.status, response.text);
-          window.location.href = "/";
-          // router.push("/dashboard", { scroll: false });
+          router.push("/404");
         },
         function (error) {
-          window.location.href = "/";
+          router.push("/404");
           console.log("FAILED...", error);
         }
-      );
+      )
+      .finally(() => {
+        router.push("/404");
+        console.log("tst");
+        console.log("tst");
+        console.log("tst");
+      });
   };
 
   return (
@@ -45,11 +50,7 @@ const Contact = ({ data }) => {
         {markdownify(title, "h1", "text-center font-normal")}
         <div className="section row pb-0">
           <div className="col-12 md:col-6 lg:col-7">
-            <form
-            // className="contact-form"
-            // method="POST"
-            // action={contact_form_action}
-            >
+            <form>
               <div className="mb-3">
                 <input
                   value={name}
