@@ -28,7 +28,7 @@ const Contact = ({ data }) => {
       .then(
         function (response) {
           console.log("SUCCESS!", response.status, response.text);
-          router.push("/", { scroll: false });
+          router.push("/dashboard", { scroll: false });
         },
         function (error) {
           console.log("FAILED...", error);
@@ -43,9 +43,9 @@ const Contact = ({ data }) => {
         <div className="section row pb-0">
           <div className="col-12 md:col-6 lg:col-7">
             <form
-              // className="contact-form"
-              // method="POST"
-              // action={contact_form_action}
+            // className="contact-form"
+            // method="POST"
+            // action={contact_form_action}
             >
               <div className="mb-3">
                 <input
