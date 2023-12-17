@@ -9,6 +9,7 @@ const Contact = ({ data }) => {
   const { frontmatter } = data;
   const { title, info } = frontmatter;
   const { contact_form_action } = config.params;
+  const router = useRouter();
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -27,7 +28,6 @@ const Contact = ({ data }) => {
       .then(
         function (response) {
           console.log("SUCCESS!", response.status, response.text);
-          const router = useRouter();
           router.push("/dashboard", { scroll: false });
         },
         function (error) {
