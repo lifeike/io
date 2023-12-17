@@ -28,7 +28,7 @@ const Contact = ({ data }) => {
       .then(
         function (response) {
           console.log("SUCCESS!", response.status, response.text);
-          router.push("/dashboard", { scroll: false });
+          router.push("/", { scroll: false });
         },
         function (error) {
           console.log("FAILED...", error);
