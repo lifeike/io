@@ -53,7 +53,6 @@ const App = ({ Component, pageProps }) => {
           content="width=device-width, initial-scale=1, maximum-scale=5"
         />
       </Head>
-      <Toaster position="bottom-center " />
       <Component {...pageProps} />
     </>
   );

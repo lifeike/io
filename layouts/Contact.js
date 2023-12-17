@@ -26,21 +26,11 @@ const Contact = ({ data }) => {
         templateParams,
         "LNIXWNBcWiH30Gpa8"
       ) //use your Service ID and Template ID and template content and public key
-      .then(
-        function (response) {
-          console.log("SUCCESS!", response.status, response.text);
-          router.push("/404");
-        },
-        function (error) {
-          router.push("/404");
-          console.log("FAILED...", error);
-        }
-      )
-      .finally(() => {
-        router.push("/404");
-        console.log("tst");
-        console.log("tst");
-        console.log("tst");
+      .then((res) => {
+        console.log("success");
+      })
+      .catch((err) => {
+        console.log("failed");
       });
   };
 
