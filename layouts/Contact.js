@@ -2,6 +2,8 @@ import config from "@config/config.json";
 import { markdownify } from "@lib/utils/textConverter";
 import emailjs from "@emailjs/browser";
 import React, { useState } from "react";
+// useRouter
+import { useRouter } from "next/navigation";
 
 const Contact = ({ data }) => {
   const { frontmatter } = data;
@@ -25,6 +27,8 @@ const Contact = ({ data }) => {
       .then(
         function (response) {
           console.log("SUCCESS!", response.status, response.text);
+          const router = useRouter();
+          router.push("/dashboard", { scroll: false });
         },
         function (error) {
           console.log("FAILED...", error);
