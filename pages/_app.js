@@ -4,6 +4,7 @@ import Head from "next/head";
 import { useEffect, useState } from "react";
 import TagManager from "react-gtm-module";
 import "styles/style.scss";
+import { Toaster } from "react-hot-toast";
 
 const App = ({ Component, pageProps }) => {
   // default theme setup
@@ -53,6 +54,7 @@ const App = ({ Component, pageProps }) => {
           content="width=device-width, initial-scale=1, maximum-scale=5"
         />
       </Head>
+      <Toaster position="bottom-center " />
       <Component {...pageProps} />
     </>
   );

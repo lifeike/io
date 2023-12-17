@@ -4,6 +4,7 @@ import emailjs from "@emailjs/browser";
 import React, { useState } from "react";
 // useRouter
 import { useRouter } from "next/navigation";
+import { toast } from "react-hot-toast";
 
 const Contact = ({ data }) => {
   const { frontmatter } = data;
@@ -28,9 +29,11 @@ const Contact = ({ data }) => {
       .then(
         function (response) {
           console.log("SUCCESS!", response.status, response.text);
-          router.push("/dashboard", { scroll: false });
+          window.location.href = "/";
+          // router.push("/dashboard", { scroll: false });
         },
         function (error) {
+          window.location.href = "/";
           console.log("FAILED...", error);
         }
       );
