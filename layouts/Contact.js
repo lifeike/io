@@ -4,7 +4,7 @@ import emailjs from "@emailjs/browser";
 import React, { useState } from "react";
 // useRouter
 import { useRouter } from "next/navigation";
-import { toast } from "react-hot-toast";
+import { Toaster, toast } from "react-hot-toast";
 
 const Contact = ({ data }) => {
   const { frontmatter } = data;
@@ -28,6 +28,8 @@ const Contact = ({ data }) => {
       ) //use your Service ID and Template ID and template content and public key
       .then((res) => {
         console.log("success");
+        router.push("/");
+        toast.success("Your inquiry sent.");
       })
       .catch((err) => {
         console.log("failed");
@@ -40,7 +42,7 @@ const Contact = ({ data }) => {
         {markdownify(title, "h1", "text-center font-normal")}
         <div className="section row pb-0">
           <div className="col-12 md:col-6 lg:col-7">
-            <form>
+            <div>
               <div className="mb-3">
                 <input
                   value={name}
@@ -90,7 +92,7 @@ const Contact = ({ data }) => {
               >
                 Send Now
               </button>
-            </form>
+            </div>
           </div>
           <div className="content col-12 md:col-6 lg:col-5">
             {markdownify(info.title, "h4")}
