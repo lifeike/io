@@ -43,8 +43,8 @@ const Contact = ({ data }) => {
         <div className="section row pb-0">
           <div className="col-12 md:col-6 lg:col-7">
             <form
-              className="contact-form"
-              method="POST"
+              // className="contact-form"
+              // method="POST"
               // action={contact_form_action}
             >
               <div className="mb-3">
