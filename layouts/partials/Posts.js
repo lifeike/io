@@ -11,7 +11,7 @@ const Posts = ({ posts }) => {
         return (
           <div className="col-12 pb-12 lg:pb-24">
             <div className="row items-center">
-              <div className="col-12 md:col-6">
+              <div className="col-12 flex justify-end md:col-6">
                 {posts[i].frontmatter.image && (
                   <Image
                     className="h-auto w-full rounded-lg"
@@ -20,11 +20,12 @@ const Posts = ({ posts }) => {
                     width={540}
                     height={227}
                     priority={true}
+                    style={{ width: "60%", height: "auto" }} // optional
                   />
                 )}
               </div>
               <div className="col-12 md:col-6">
-                <h2 className="h3 mb-2 mt-4">
+                <h2 className="h3 mb-2 ">
                   <Link
                     href={`/${blog_folder}/${posts[i].slug}`}
                     className="block hover:text-primary"
@@ -38,13 +39,13 @@ const Posts = ({ posts }) => {
                     "div"
                   )}
                 </p>
-                <Link
+                {/* <Link
                   className="btn btn-primary mt-4"
                   href={`/${blog_folder}/${posts[i].slug}`}
                   rel=""
                 >
                   Read More
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>
