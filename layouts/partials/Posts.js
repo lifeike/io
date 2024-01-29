@@ -11,7 +11,7 @@ const Posts = ({ posts }) => {
         return (
           <div className="col-12 pb-12 lg:pb-24">
             <div className="row items-center">
-              <div className="col-12 flex justify-end md:col-6">
+              <div className="col-12 flex justify-center md:col-6">
                 {posts[i].frontmatter.image && (
                   <Image
                     className="h-auto w-full rounded-lg"
@@ -20,7 +20,7 @@ const Posts = ({ posts }) => {
                     width={540}
                     height={227}
                     priority={true}
-                    style={{ width: "60%", height: "auto" }} // optional
+                    style={{ width: "30%", height: "30%" }} // optional
                   />
                 )}
               </div>
