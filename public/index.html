@@ -1,696 +1,686 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <!-- UTF character encoding means all characters under UTF-8, including emojis, render correctly -->
-    <meta charset="UTF-8" />
+    <head>
+        
 
-    <!-- Ensures the viewport widths are defined correctly and work on all devices (esp. mobile) -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+        
 
-    <!-- May be used in SERP results. Search Engines may also change them, at their discretion. Good to set anyway -->
-    <meta
-      name="description"
-      content="The main branch of the advanced starter kit. Contains a basic 11ty setup for clients not needing much additional functionality. Similar to our Intermediate Kits."
-    />
+        <!-- UTF character encoding means all characters under UTF-8, including emojis, render correctly -->
+        <meta charset="UTF-8">
 
-    <!-- Identifies eleventy as the generator for this document. Shows in apps like Wappalyzer or BuiltWith. Proves that you're a worthy developer that cares about your product -->
-    <meta name="generator" content="Eleventy v2.0.1" />
+        <!-- Ensures the viewport widths are defined correctly and work on all devices (esp. mobile) -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-    <!-- Open Graph tags to improve how the website shows up on social media -->
+        <!-- May be used in SERP results. Search Engines may also change them, at their discretion. Good to set anyway -->
+        <meta name="description" content="The main branch of the advanced starter kit. Contains a basic 11ty setup for clients not needing much additional functionality. Similar to our Intermediate Kits.">
 
-    <meta property="og:title" content="Pulse Point Software" />
-    <meta
-      property="og:description"
-      content="The main branch of the advanced starter kit. Contains a basic 11ty setup for clients not needing much additional functionality. Similar to our Intermediate Kits."
-    />
-    <meta property="og:url" content="https://www.codestitch.app/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://codestitch.app/frontend/images/logo.png" />
-    <meta property="og:site_name" content="Code Stitch Web Designs" />
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:image:width" content="1421" />
-    <meta property="og:image:height" content="180" />
+        <!-- Identifies eleventy as the generator for this document. Shows in apps like Wappalyzer or BuiltWith. Proves that you're a worthy developer that cares about your product -->
+        <meta name="generator" content="Eleventy v2.0.1">
 
-    <!-- Helps prevent duplicate content issues -->
-    <link rel="canonical" href="https://www.codestitch.app/" />
+        <!-- Open Graph tags to improve how the website shows up on social media -->
+        
+        <meta property="og:title" content="The Main Branch">
+        <meta property="og:description" content="The main branch of the advanced starter kit. Contains a basic 11ty setup for clients not needing much additional functionality. Similar to our Intermediate Kits.">
+        <meta property="og:url" content="https://www.codestitch.app/">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="https://codestitch.app/frontend/images/logo.png">
+        <meta property="og:site_name" content="Code Stitch Web Designs">
+        <meta property="og:locale" content="en_US">
+        <meta property="og:image:width" content="1421">
+        <meta property="og:image:height" content="180">
 
-    <!-- Sitewide Stylesheets -->
-    <link rel="stylesheet" href="/assets/css/root.css" />
-    <link rel="stylesheet" href="/assets/css/dark.css" />
+        <!-- Helps prevent duplicate content issues -->
+        <link rel="canonical" href="https://www.codestitch.app/">
 
-    <!-- Sitewide Scripts -->
-    <script src="/assets/js/dark.js" defer></script>
-    <script src="/assets/js/nav.js" defer></script>
+        <!-- Sitewide Stylesheets -->
+        <link rel="stylesheet" href="/assets/css/root.css">
+        <link rel="stylesheet" href="/assets/css/dark.css">
 
-    <!-- Shopify Scripts -->
-    <script>
-      window.shopify = window.shopify || {}
-      window.shopify.auth = {
-        store_url: "codestitch.myshopify.com",
-        access_token: "3e5d1f3b999bf5d82849f89d66ea2992",
-        api_verion: "",
-      }
-    </script>
-    <script src="https://sdks.shopifycdn.com/buy-button/2.4.0/buybutton.js" defer></script>
-    <script src="/assets/js/shopify.js" defer></script>
-    <!-- Use a head block in any layout extending from base.html to include page-specific <head> tags. It will be included here -->
+        <!-- Sitewide Scripts -->
+        <script src="/assets/js/dark.js" defer></script>
+        <script src="/assets/js/nav.js" defer></script>
 
-    <link rel="stylesheet" href="/assets/css/local.css" />
+        <!-- Shopify Scripts -->
+        <script>
+            window.shopify = window.shopify || {}
+            window.shopify.auth = {
+                store_url: "codestitch.myshopify.com",
+                access_token: "3e5d1f3b999bf5d82849f89d66ea2992",
+                api_verion: ""
+            }
+        </script>
+        <script src="https://sdks.shopifycdn.com/buy-button/2.4.0/buybutton.js" defer></script>
+        <script src="/assets/js/shopify.js" defer></script>
+        <!-- Use a head block in any layout extending from base.html to include page-specific <head> tags. It will be included here -->
+        
+        
+        
+<link rel="stylesheet" href="/assets/css/local.css" />
 
-    <!-- Uses the title directly from the frontmatter of the page -->
-    <title>The Main Branch</title>
-  </head>
-  <body>
-    <!-- ============================================ -->
-    <!--                 Navigation                   -->
-    <!-- ============================================ -->
 
-    <header id="cs-navigation">
-      <div class="cs-top-bar">
-        <div class="cs-top-container">
-          <!--Nav Logo-->
-          <a href="" class="cs-logo" aria-label="back to home">
-            <img src="/assets/images/3.png" alt="logo" width="197" height="43" aria-hidden="true" decoding="async" />
-          </a>
-          <div class="cs-contact-group">
-            <a class="cs-contact-link" href="mailto:help@codestitch.app">
-              <picture class="cs-wrapper">
-                <img
-                  class="cs-icon"
-                  loading="lazy"
-                  decoding="async"
-                  src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/yellow-mail.svg"
-                  alt="icon"
-                  width="24"
-                  height="24"
-                />
-              </picture>
-              <div class="cs-info">
-                <span class="cs-header">Found a bug?</span>
-                <span class="cs-link-content">Email us!</span>
-              </div>
-            </a>
-            <a class="cs-contact-link" href="https://www.codestitch.app/" target="_blank">
-              <picture class="cs-wrapper">
-                <img
-                  class="cs-icon"
-                  loading="lazy"
-                  decoding="async"
-                  src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/yellow-pin.svg"
-                  alt="icon"
-                  width="24"
-                  height="24"
-                />
-              </picture>
-              <div class="cs-info">
-                <span class="cs-header">Want more sections?</span>
-                <span class="cs-link-content">Visit CodeStitch!</span>
-              </div>
-            </a>
-            <a href="" class="cs-button-solid">Priority CTA</a>
-          </div>
-          <!--Dark Mode toggle, uncomment button code if you want to enable a dark mode toggle-->
-          <button id="dark-mode-toggle" aria-label="dark mode toggle">
-            <svg class="cs-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" style="enable-background: new 0 0 480 480" xml:space="preserve">
-              <path
-                d="M459.782 347.328c-4.288-5.28-11.488-7.232-17.824-4.96-17.76 6.368-37.024 9.632-57.312 9.632-97.056 0-176-78.976-176-176 0-58.4 28.832-112.768 77.12-145.472 5.472-3.712 8.096-10.4 6.624-16.832S285.638 2.4 279.078 1.44C271.59.352 264.134 0 256.646 0c-132.352 0-240 107.648-240 240s107.648 240 240 240c84 0 160.416-42.688 204.352-114.176 3.552-5.792 3.04-13.184-1.216-18.496z"
-              />
-            </svg>
+        <!-- Uses the title directly from the frontmatter of the page -->
+        <title>The Main Branch</title>
+    </head>
+    <body>
+        <!-- ============================================ -->
+<!--                 Navigation                   -->
+<!-- ============================================ -->
+
+<header id="cs-navigation">
+  <div class="cs-top-bar">
+    <div class="cs-top-container">
+      <!--Nav Logo-->
+      <a href="" class="cs-logo" aria-label="back to home">
+        <img src="/assets/images/3.png" alt="logo" width="197" height="43" aria-hidden="true" decoding="async" />
+      </a>
+      <div class="cs-contact-group">
+        <a class="cs-contact-link" href="mailto:help@codestitch.app">
+          <picture class="cs-wrapper">
             <img
-              class="cs-sun"
-              aria-hidden="true"
-              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fsun.svg"
-              decoding="async"
-              alt="moon"
-              width="15"
-              height="15"
-            />
-          </button>
-        </div>
-      </div>
-      <!--Wrapped the bottom container in a wrapper div so we can have a full width background color, and centered the container inside of it-->
-      <div class="cs-bottom-bar">
-        <div class="cs-container">
-          <!--Navigation List-->
-          <nav class="cs-nav" role="navigation">
-            <!--Mobile Nav Toggle-->
-            <button class="cs-toggle" aria-label="mobile menu toggle">
-              <div class="cs-box" aria-hidden="true">
-                <span class="cs-line cs-line1" aria-hidden="true"></span>
-                <span class="cs-line cs-line2" aria-hidden="true"></span>
-                <span class="cs-line cs-line3" aria-hidden="true"></span>
-              </div>
-            </button>
-            <!-- All CodeStitch navigations use the same HTML within the cs-ul-wrapper.
-                 This one has been built with eleventyNavigation in mind, so you don't need to manually set active link styles or adjust HTML whenever a new page is added.
-                 Should you wish to use this way of working, just replace the .cs-ul-wrapper in the new navigation with the one below-->
-            <div class="cs-ul-wrapper">
-              <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
-                <li class="cs-li">
-                  <a href="/" class="cs-li-link cs-active"> Main </a>
-                </li>
-
-                <li class="cs-li">
-                  <a href="/less/" class="cs-li-link"> LESS </a>
-                </li>
-
-                <li class="cs-li">
-                  <a href="/sass/" class="cs-li-link"> SASS </a>
-                </li>
-
-                <li class="cs-li cs-dropdown" tabindex="0">
-                  <a href="/cms/" class="cs-li-link">
-                    CMS
-                    <img
-                      class="cs-drop-icon"
-                      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fdown.svg"
-                      alt="dropdown icon"
-                      width="15"
-                      height="15"
-                      decoding="async"
-                      aria-hidden="true"
-                    />
-                  </a>
-
-                  <ul class="cs-drop-ul">
-                    <li class="cs-drop-li">
-                      <a href="/blog/" class="cs-li-link cs-drop-link">Blog</a>
-                    </li>
-
-                    <li class="cs-drop-li">
-                      <a href="/menu/" class="cs-li-link cs-drop-link">Menu</a>
-                    </li>
-                  </ul>
-                </li>
-
-                <li class="cs-li cs-dropdown" tabindex="0">
-                  <a href="/shop/" class="cs-li-link">
-                    Shop
-                    <img
-                      class="cs-drop-icon"
-                      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fdown.svg"
-                      alt="dropdown icon"
-                      width="15"
-                      height="15"
-                      decoding="async"
-                      aria-hidden="true"
-                    />
-                  </a>
-
-                  <ul class="cs-drop-ul">
-                    <li class="cs-drop-li">
-                      <a href="/collection/automated-collection/" class="cs-li-link cs-drop-link">Automated Collection</a>
-                    </li>
-
-                    <li class="cs-drop-li">
-                      <a href="/collection/hydrogen/" class="cs-li-link cs-drop-link">Hydrogen</a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </nav>
-          <a class="cs-call" href="https://www.reddit.com/r/codestitch" target="_blank">
-            <picture class="cs-wrapper">
-              <img
-                class="cs-icon"
-                loading="lazy"
-                decoding="async"
-                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/adv-kit-reddit.svg"
-                alt="icon"
-                width="24"
-                height="24"
-              />
-            </picture>
-            <div class="cs-info">
-              <span class="cs-header">Need help?</span>
-              <span class="cs-link-content">Visit our subreddit!</span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </header>
-
-    <main id="main">
-      <!-- ============================================ -->
-      <!--                    Hero                      -->
-      <!-- ============================================ -->
-
-      <section id="hero-1621">
-        <div class="cs-container">
-          <div class="cs-content">
-            <span class="cs-topper">For any small business need</span>
-            <h1 class="cs-title">The CodeStitch Advanced Starter Kit - Main Branch</h1>
-            <a href="" class="cs-button-solid">Call to Action</a>
-            <!--Bottom Corners-->
-            <div class="cs-corners" aria-hidden="true"></div>
-          </div>
-          <ul class="cs-card-group">
-            <li class="cs-item">
-              <img
-                class="cs-icon"
-                loading="lazy"
-                decoding="async"
-                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/adv-kit-styles.svg"
-                alt="icon"
-                width="48"
-                height="48"
-              />
-              <h2 class="cs-h3">LESS/SASS</h2>
-              <p class="cs-item-text">Both preprocessors, alongside vanilla CSS, all available under one kit</p>
-            </li>
-            <li class="cs-item">
-              <img
-                class="cs-icon"
-                loading="lazy"
-                decoding="async"
-                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/adv-kit-optimize.svg"
-                alt="icon"
-                width="48"
-                height="48"
-              />
-              <h2 class="cs-h3">Optimization</h2>
-              <p class="cs-item-text">Get better Pagespeed scores, quicker, with automatic critical CSS inlining, minifiction and asset optimization</p>
-            </li>
-            <li class="cs-item">
-              <img
-                class="cs-icon"
-                loading="lazy"
-                decoding="async"
-                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/adv-kit-cart.svg"
-                alt="icon"
-                width="48"
-                height="48"
-              />
-              <h2 class="cs-h3">eCommerce</h2>
-              <p class="cs-item-text">Create the fastest of eCommerce stores with a seamless Shopify integration</p>
-            </li>
-            <li class="cs-item">
-              <img
-                class="cs-icon"
-                loading="lazy"
-                decoding="async"
-                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/adv-kit-cms.svg"
-                alt="icon"
-                width="48"
-                height="48"
-              />
-              <h2 class="cs-h3">CMS</h2>
-              <p class="cs-item-text">Free time and empower your clients with a Decap content management system</p>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Background Image -->
-        <picture class="cs-background">
-          <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting-2-m.jpeg" />
-          <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting-2.jpeg" />
-          <img
-            loading="lazy"
-            decoding="async"
-            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting-2.jpeg"
-            alt="meeting"
-            width="1920"
-            height="1200"
-            aria-hidden="true"
-          />
-        </picture>
-      </section>
-
-      <!-- ============================================ -->
-      <!--                 Side By Side                 -->
-      <!-- ============================================ -->
-
-      <section id="sbs-523">
-        <div class="cs-container">
-          <div class="cs-content">
-            <span class="cs-topper">How it works</span>
-            <h2 class="cs-title">What makes this kit special</h2>
-            <p class="cs-text">
-              Behind the kit is careful management of the file structure, such that all shared code lives in the "main" branch. Each feature then lives on a
-              separate branch, allowing you to choose what capabilities the project requires.
-            </p>
-            <p class="cs-text">
-              Some files, namely "package.json", "package-lock.json", ".eleventy.js", and "_includes/base.html", require additions to them when merging new
-              branches. Cloning the repo from a template loses all commit history, so conflicts will arise in these files. These can be resolved by ensuring all
-              unique code is merged into the project.
-            </p>
-            <p class="cs-text">
-              As such, a basic knowledge of Git is required before using this kit, with a solid grasp of how to resolve merge conflicts strongly advisable. You
-              are welcome to merge in feature branches at a later date, after building the project up, but this may result in more complicated merges.
-            </p>
-            <a href="" class="cs-button-solid">Read More</a>
-          </div>
-          <div class="cs-image-group">
-            <!--Large Image-->
-            <picture class="cs-picture cs-picture-large">
-              <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/business-meeting.jpeg" />
-              <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/business-meeting.jpeg" />
-              <img
-                aria-hidden="true"
-                loading="lazy"
-                decoding="async"
-                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/business-meeting.jpeg"
-                alt="lab"
-                width="334"
-                height="380"
-              />
-            </picture>
-            <!--Small Image-->
-            <picture class="cs-picture cs-picture-small">
-              <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/business-meeting-women.jpeg" />
-              <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/business-meeting-women.jpeg" />
-              <img
-                aria-hidden="true"
-                loading="lazy"
-                decoding="async"
-                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/business-meeting-women.jpeg"
-                alt="lab"
-                width="183"
-                height="158"
-              />
-            </picture>
-          </div>
-        </div>
-      </section>
-
-      <!-- ============================================ -->
-      <!--                   Steps                      -->
-      <!-- ============================================ -->
-
-      <section id="steps-1172">
-        <div class="cs-container">
-          <div class="cs-content">
-            <span class="cs-topper">Just a few steps before</span>
-            <h2 class="cs-title">How To Get Started</h2>
-            <p class="cs-text">
-              As this kit relies on merging different branches to get started, we'll need to do a few things first to ensure this happens smoothly and nothing
-              gets missed.
-            </p>
-          </div>
-          <ul class="cs-card-group">
-            <li class="cs-item">
-              <picture class="cs-picture">
-                <img
-                  class="cs-icon"
-                  loading="lazy"
-                  decoding="async"
-                  src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/adv-kit-git.svg"
-                  alt="icon"
-                  width="48"
-                  height="48"
-                />
-              </picture>
-              <h2 class="cs-h3">1. Merge Branches</h2>
-              <p class="cs-item-text">
-                Merge the branches you need for the project via the CLI, using "git merge [BRANCH] --allow-unrelated-histories". Resolve any conflicts.
-              </p>
-            </li>
-
-            <li class="cs-item">
-              <picture class="cs-picture">
-                <img
-                  class="cs-icon"
-                  loading="lazy"
-                  decoding="async"
-                  src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/adv-kit-install.svg"
-                  alt="icon"
-                  width="48"
-                  height="48"
-                />
-              </picture>
-              <h2 class="cs-h3">2. Install Dependencies</h2>
-              <p class="cs-item-text">Run "npm install" to install all the packages and plugins needed to make your super awesome website.</p>
-            </li>
-            <li class="cs-item">
-              <picture class="cs-picture">
-                <img
-                  class="cs-icon"
-                  loading="lazy"
-                  decoding="async"
-                  src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/adv-kit-todo.svg"
-                  alt="icon"
-                  width="48"
-                  height="48"
-                />
-              </picture>
-              <h2 class="cs-h3">3. Check Off Todos</h2>
-              <p class="cs-item-text">
-                Search the project for any instance of "CS-TODO". We've marked any actions that need to be taken to get your project up to speed ASAP.
-              </p>
-            </li>
-            <li class="cs-item">
-              <picture class="cs-picture">
-                <img
-                  class="cs-icon"
-                  loading="lazy"
-                  decoding="async"
-                  src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/adv-kit-code.svg"
-                  alt="icon"
-                  width="48"
-                  height="48"
-                />
-              </picture>
-              <h2 class="cs-h3">4. Get Developing!</h2>
-              <p class="cs-item-text">
-                If using the sass/less branch, you can move over the starter styles to get a headstart. Otherwise, clear all page data and styles, and begin!
-              </p>
-            </li>
-          </ul>
-        </div>
-        <!--Tire Screech-->
-      </section>
-
-      <!-- ============================================ -->
-      <!--                Why Choose Us                 -->
-      <!-- ============================================ -->
-
-      <section id="why-choose-1657">
-        <div class="cs-container">
-          <div class="cs-content">
-            <div class="cs-flex">
-              <span class="cs-topper">CSS, LESS and SASS</span>
-              <h2 class="cs-title">Your favourite CSS syntaxes - all under one roof</h2>
-            </div>
-            <ul class="cs-ul">
-              <li class="cs-li">
-                <span class="cs-number">CSS</span>
-                <p class="cs-li-text">
-                  If you prefer vanilla CSS, everything has already been set up for you. You shouldn't need to merge in the SASS and LESS branches, and the
-                  ./starter-styles folder can be deleted.
-                </p>
-              </li>
-              <li class="cs-li">
-                <span class="cs-number">LESS</span>
-                <p class="cs-li-text">
-                  If you want to use the LESS preprocessor, make sure the "less" branch has been merged to include the LESS processor. When all branches have
-                  been merged, you can find the kit styles in ./starter-styles. Copy these over to /assets/less, or delete them to start from scratch.
-                </p>
-              </li>
-              <li class="cs-li">
-                <span class="cs-number">SASS</span>
-                <p class="cs-li-text">
-                  Same as before - merge in the "sass" branch to include the SASS processor. Delete the ./starter-styles folder or copy over the SASS styles
-                  into /assets/sass to get a headstart on the project
-                </p>
-              </li>
-            </ul>
-          </div>
-          <div class="cs-wrapper">
-            <picture class="cs-picture">
-              <!--Mobile Image-->
-              <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting12.jpg" />
-              <!--Tablet and above Image-->
-              <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting12.jpg" />
-              <img
-                loading="lazy"
-                decoding="async"
-                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting12.jpg"
-                alt="meeting"
-                width="630"
-                height="414"
-              />
-            </picture>
-
-            <p class="cs-review">
-              <svg class="cs-quote" preserveAspectRatio="none" viewBox="0 0 100 93" fill="none" xmlns="http://www.w3.org/2000/svg" preser>
-                <g opacity=".4" clip-path="url(#a)" fill="var(--quoteColor)">
-                  <path d="M22.94 84H0L18.305.854H55L22.94 84ZM67.94 84H45L63.305.854H100L67.94 84Z" />
-                </g>
-                <defs>
-                  <clipPath id="a-1657"><path fill="#fff" transform="translate(0 .854)" d="M0 0h100v83.146H0z" /></clipPath>
-                </defs>
-              </svg>
-              To minimise the number of merge conflicts, vanilla CSS for these introductory pages are supplied in /assets. Should you wish to carry over the
-              starting kit styles, LESS and SASS versions are supplied outside of ./src
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- ============================================ -->
-      <!--             Side By Side Reverse             -->
-      <!-- ============================================ -->
-
-      <section id="sbsr-1309">
-        <div class="cs-container">
-          <!-- Left Image Section -->
-          <div class="cs-image-group">
-            <!--Floating Box-->
-            <div class="cs-box">
-              <span class="cs-desc">Building a better website, together</span>
-            </div>
-            <!--Image-->
-            <picture class="cs-picture">
-              <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/tax1.jpg" />
-              <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/tax1.jpg" />
-              <img
-                loading="lazy"
-                decoding="async"
-                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/tax1.jpg"
-                alt="meeting"
-                width="630"
-                height="630"
-                aria-hidden="true"
-              />
-            </picture>
-          </div>
-          <!-- Right Content Section-->
-          <div class="cs-content">
-            <span class="cs-topper">Help & Support</span>
-            <h2 class="cs-title">Guidance every step of the way</h2>
-            <p class="cs-text">
-              Outside of a cool new feature, each branch comes with an introductory landing page (just like this one) and a branch-specific README. The landing
-              page gives you a quick overview of the branch, with the README providing more technical details should you wish to expand.
-            </p>
-            <p class="cs-text">
-              Additionally, all project-critical actions that need to be taken have a comment containing "CS-TODO". After merging in your branches, you can
-              search the codebase for "CS-TODO", find the most important changes that need to be made, and action them effortlessly.
-            </p>
-            <p class="cs-text">
-              Finally, if you are still stuck or find a bug in the kit, you can use the CTAs in the header to get directly in touch with the kit creators, or
-              reach out to a community of hundreds of other developers.
-            </p>
-            <p class="cs-text">
-              The kit continues to be supported going forward, with a complete set of tutorial videos and additional feature branches planned in the very near
-              future. Follow our subreddit to stay up to date!
-            </p>
-            <a class="cs-button-solid" aria-label="learn more about our programs" href="">Learn More</a>
-          </div>
-        </div>
-      </section>
-    </main>
-    <!-- ============================================ -->
-    <!--                  Footer                      -->
-    <!-- ============================================ -->
-
-    <section id="footer-1390">
-      <div class="cs-container">
-        <div class="cs-top">
-          <a aria-label="go back to home" class="cs-logo" href="">
-            <img
-              class="cs-logo-img"
+              class="cs-icon"
               loading="lazy"
               decoding="async"
-              src="https://codestitch.app/frontend/images/logo-white.svg"
-              alt="logo"
-              width="209"
-              height="40"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/yellow-mail.svg"
+              alt="icon"
+              width="24"
+              height="24"
             />
-          </a>
-          <ul class="cs-ul">
-            <li class="cs-li">
-              <a href="" class="cs-link">Main</a>
-            </li>
+          </picture>
+          <div class="cs-info">
+            <span class="cs-header">Found a bug?</span>
+            <span class="cs-link-content">Email us!</span>
+          </div>
+        </a>
+        <a class="cs-contact-link" href="https://www.codestitch.app/" target="_blank">
+          <picture class="cs-wrapper">
+            <img
+              class="cs-icon"
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/yellow-pin.svg"
+              alt="icon"
+              width="24"
+              height="24"
+            />
+          </picture>
+          <div class="cs-info">
+            <span class="cs-header">Want more sections?</span>
+            <span class="cs-link-content">Visit CodeStitch!</span>
+          </div>
+        </a>
+        <a href="" class="cs-button-solid">Priority CTA</a>
+      </div>
+      <!--Dark Mode toggle, uncomment button code if you want to enable a dark mode toggle-->
+      <button id="dark-mode-toggle" aria-label="dark mode toggle">
+        <svg class="cs-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" style="enable-background: new 0 0 480 480" xml:space="preserve">
+          <path
+            d="M459.782 347.328c-4.288-5.28-11.488-7.232-17.824-4.96-17.76 6.368-37.024 9.632-57.312 9.632-97.056 0-176-78.976-176-176 0-58.4 28.832-112.768 77.12-145.472 5.472-3.712 8.096-10.4 6.624-16.832S285.638 2.4 279.078 1.44C271.59.352 264.134 0 256.646 0c-132.352 0-240 107.648-240 240s107.648 240 240 240c84 0 160.416-42.688 204.352-114.176 3.552-5.792 3.04-13.184-1.216-18.496z"
+          />
+        </svg>
+        <img
+          class="cs-sun"
+          aria-hidden="true"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fsun.svg"
+          decoding="async"
+          alt="moon"
+          width="15"
+          height="15"
+        />
+      </button>
+    </div>
+  </div>
+  <!--Wrapped the bottom container in a wrapper div so we can have a full width background color, and centered the container inside of it-->
+  <div class="cs-bottom-bar">
+    <div class="cs-container">
+      <!--Navigation List-->
+      <nav class="cs-nav" role="navigation">
+        <!--Mobile Nav Toggle-->
+        <button class="cs-toggle" aria-label="mobile menu toggle">
+          <div class="cs-box" aria-hidden="true">
+            <span class="cs-line cs-line1" aria-hidden="true"></span>
+            <span class="cs-line cs-line2" aria-hidden="true"></span>
+            <span class="cs-line cs-line3" aria-hidden="true"></span>
+          </div>
+        </button>
+        <!-- All CodeStitch navigations use the same HTML within the cs-ul-wrapper.
+                 This one has been built with eleventyNavigation in mind, so you don't need to manually set active link styles or adjust HTML whenever a new page is added.
+                 Should you wish to use this way of working, just replace the .cs-ul-wrapper in the new navigation with the one below-->
+        <div class="cs-ul-wrapper">
+          <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+                 
+            <li class="cs-li " >
+              
+              <a href="/" class="cs-li-link  cs-active ">
+                Main 
+              </a>
 
-            <li class="cs-li">
-              <a href="" class="cs-link">LESS</a>
+               
             </li>
+               
+            <li class="cs-li " >
+              
+              <a href="/less/" class="cs-li-link ">
+                LESS 
+              </a>
 
-            <li class="cs-li">
-              <a href="" class="cs-link">SASS</a>
+               
             </li>
+               
+            <li class="cs-li " >
+              
+              <a href="/sass/" class="cs-li-link ">
+                SASS 
+              </a>
 
-            <li class="cs-li">
-              <a href="" class="cs-link">CMS</a>
+               
             </li>
+               
+            <li class="cs-li  cs-dropdown "  tabindex="0" >
+              
+              <a href="/cms/" class="cs-li-link ">
+                CMS 
+                <img
+                  class="cs-drop-icon"
+                  src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fdown.svg"
+                  alt="dropdown icon"
+                  width="15"
+                  height="15"
+                  decoding="async"
+                  aria-hidden="true"
+                />
+                
+              </a>
 
-            <li class="cs-li">
-              <a href="" class="cs-link">Shop</a>
+               
+              <ul class="cs-drop-ul">
+                
+                <li class="cs-drop-li">
+                  <a href="/blog/" class="cs-li-link cs-drop-link">Blog</a>
+                </li>
+                
+                <li class="cs-drop-li">
+                  <a href="/menu/" class="cs-li-link cs-drop-link">Menu</a>
+                </li>
+                
+              </ul>
+              
             </li>
+               
+            <li class="cs-li  cs-dropdown "  tabindex="0" >
+              
+              <a href="/shop/" class="cs-li-link ">
+                Shop 
+                <img
+                  class="cs-drop-icon"
+                  src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fdown.svg"
+                  alt="dropdown icon"
+                  width="15"
+                  height="15"
+                  decoding="async"
+                  aria-hidden="true"
+                />
+                
+              </a>
+
+               
+              <ul class="cs-drop-ul">
+                
+                <li class="cs-drop-li">
+                  <a href="/collection/automated-collection/" class="cs-li-link cs-drop-link">Automated Collection</a>
+                </li>
+                
+                <li class="cs-drop-li">
+                  <a href="/collection/hydrogen/" class="cs-li-link cs-drop-link">Hydrogen</a>
+                </li>
+                
+              </ul>
+              
+            </li>
+            
           </ul>
+        </div>
+      </nav>
+      <a class="cs-call" href="https://www.reddit.com/r/codestitch" target="_blank">
+        <picture class="cs-wrapper">
+          <img
+            class="cs-icon"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/adv-kit-reddit.svg"
+            alt="icon"
+            width="24"
+            height="24"
+          />
+        </picture>
+        <div class="cs-info">
+          <span class="cs-header">Need help?</span>
+          <span class="cs-link-content">Visit our subreddit!</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</header>
+
+        <main id="main">
+            
+<!-- ============================================ -->
+<!--                    Hero                      -->
+<!-- ============================================ -->
+
+<section id="hero-1621">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">For any small business need</span>
+      <h1 class="cs-title">The CodeStitch Advanced Starter Kit - Main Branch</h1>
+      <a href="" class="cs-button-solid">Call to Action</a>
+      <!--Bottom Corners-->
+      <div class="cs-corners" aria-hidden="true"></div>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <img
+          class="cs-icon"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/adv-kit-styles.svg"
+          alt="icon"
+          width="48"
+          height="48"
+        />
+        <h2 class="cs-h3">LESS/SASS</h2>
+        <p class="cs-item-text">Both preprocessors, alongside vanilla CSS, all available under one kit</p>
+      </li>
+      <li class="cs-item">
+        <img
+          class="cs-icon"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/adv-kit-optimize.svg"
+          alt="icon"
+          width="48"
+          height="48"
+        />
+        <h2 class="cs-h3">Optimization</h2>
+        <p class="cs-item-text">Get better Pagespeed scores, quicker, with automatic critical CSS inlining, minifiction and asset optimization</p>
+      </li>
+      <li class="cs-item">
+        <img
+          class="cs-icon"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/adv-kit-cart.svg"
+          alt="icon"
+          width="48"
+          height="48"
+        />
+        <h2 class="cs-h3">eCommerce</h2>
+        <p class="cs-item-text">Create the fastest of eCommerce stores with a seamless Shopify integration</p>
+      </li>
+      <li class="cs-item">
+        <img
+          class="cs-icon"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/adv-kit-cms.svg"
+          alt="icon"
+          width="48"
+          height="48"
+        />
+        <h2 class="cs-h3">CMS</h2>
+        <p class="cs-item-text">Free time and empower your clients with a Decap content management system</p>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Background Image -->
+  <picture class="cs-background">
+    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting-2-m.jpeg" />
+    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting-2.jpeg" />
+    <img
+      loading="lazy"
+      decoding="async"
+      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting-2.jpeg"
+      alt="meeting"
+      width="1920"
+      height="1200"
+      aria-hidden="true"
+    />
+  </picture>
+</section>
+
+<!-- ============================================ -->
+<!--                 Side By Side                 -->
+<!-- ============================================ -->
+
+<section id="sbs-523">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">How it works</span>
+      <h2 class="cs-title">What makes this kit special</h2>
+      <p class="cs-text">
+        Behind the kit is careful management of the file structure, such that all shared code lives in the "main" branch. Each feature then lives on a separate
+        branch, allowing you to choose what capabilities the project requires.
+      </p>
+      <p class="cs-text">
+        Some files, namely "package.json", "package-lock.json", ".eleventy.js", and "_includes/base.html", require additions to them when merging new branches.
+        Cloning the repo from a template loses all commit history, so conflicts will arise in these files. These can be resolved by ensuring all unique code is
+        merged into the project.
+      </p>
+      <p class="cs-text">
+        As such, a basic knowledge of Git is required before using this kit, with a solid grasp of how to resolve merge conflicts strongly advisable. You are
+        welcome to merge in feature branches at a later date, after building the project up, but this may result in more complicated merges.
+      </p>
+      <a href="" class="cs-button-solid">Read More</a>
+    </div>
+    <div class="cs-image-group">
+      <!--Large Image-->
+      <picture class="cs-picture cs-picture-large">
+        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/business-meeting.jpeg" />
+        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/business-meeting.jpeg" />
+        <img
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/business-meeting.jpeg"
+          alt="lab"
+          width="334"
+          height="380"
+        />
+      </picture>
+      <!--Small Image-->
+      <picture class="cs-picture cs-picture-small">
+        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/business-meeting-women.jpeg" />
+        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/business-meeting-women.jpeg" />
+        <img
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/business-meeting-women.jpeg"
+          alt="lab"
+          width="183"
+          height="158"
+        />
+      </picture>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!--                   Steps                      -->
+<!-- ============================================ -->
+
+<section id="steps-1172">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Just a few steps before</span>
+      <h2 class="cs-title">How To Get Started</h2>
+      <p class="cs-text">
+        As this kit relies on merging different branches to get started, we'll need to do a few things first to ensure this happens smoothly and nothing gets
+        missed.
+      </p>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <img
+            class="cs-icon"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/adv-kit-git.svg"
+            alt="icon"
+            width="48"
+            height="48"
+          />
+        </picture>
+        <h2 class="cs-h3">1. Merge Branches</h2>
+        <p class="cs-item-text">
+          Merge the branches you need for the project via the CLI, using "git merge [BRANCH] --allow-unrelated-histories". Resolve any conflicts.
+        </p>
+      </li>
+
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <img
+            class="cs-icon"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/adv-kit-install.svg"
+            alt="icon"
+            width="48"
+            height="48"
+          />
+        </picture>
+        <h2 class="cs-h3">2. Install Dependencies</h2>
+        <p class="cs-item-text">Run "npm install" to install all the packages and plugins needed to make your super awesome website.</p>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <img
+            class="cs-icon"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/adv-kit-todo.svg"
+            alt="icon"
+            width="48"
+            height="48"
+          />
+        </picture>
+        <h2 class="cs-h3">3. Check Off Todos</h2>
+        <p class="cs-item-text">
+          Search the project for any instance of "CS-TODO". We've marked any actions that need to be taken to get your project up to speed ASAP.
+        </p>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <img
+            class="cs-icon"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/adv-kit-code.svg"
+            alt="icon"
+            width="48"
+            height="48"
+          />
+        </picture>
+        <h2 class="cs-h3">4. Get Developing!</h2>
+        <p class="cs-item-text">
+          If using the sass/less branch, you can move over the starter styles to get a headstart. Otherwise, clear all page data and styles, and begin!
+        </p>
+      </li>
+    </ul>
+  </div>
+  <!--Tire Screech-->
+</section>
+
+<!-- ============================================ -->
+<!--                Why Choose Us                 -->
+<!-- ============================================ -->
+
+<section id="why-choose-1657">
+  <div class="cs-container">
+    <div class="cs-content">
+      <div class="cs-flex">
+        <span class="cs-topper">CSS, LESS and SASS</span>
+        <h2 class="cs-title">Your favourite CSS syntaxes - all under one roof</h2>
+      </div>
+      <ul class="cs-ul">
+        <li class="cs-li">
+          <span class="cs-number">CSS</span>
+          <p class="cs-li-text">
+            If you prefer vanilla CSS, everything has already been set up for you. You shouldn't need to merge in the SASS and LESS branches, and the
+            ./starter-styles folder can be deleted.
+          </p>
+        </li>
+        <li class="cs-li">
+          <span class="cs-number">LESS</span>
+          <p class="cs-li-text">
+            If you want to use the LESS preprocessor, make sure the "less" branch has been merged to include the LESS processor. When all branches have been
+            merged, you can find the kit styles in ./starter-styles. Copy these over to /assets/less, or delete them to start from scratch.
+          </p>
+        </li>
+        <li class="cs-li">
+          <span class="cs-number">SASS</span>
+          <p class="cs-li-text">
+            Same as before - merge in the "sass" branch to include the SASS processor. Delete the ./starter-styles folder or copy over the SASS styles into
+            /assets/sass to get a headstart on the project
+          </p>
+        </li>
+      </ul>
+    </div>
+    <div class="cs-wrapper">
+      <picture class="cs-picture">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting12.jpg" />
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting12.jpg" />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting12.jpg"
+          alt="meeting"
+          width="630"
+          height="414"
+        />
+      </picture>
+
+      <p class="cs-review">
+        <svg class="cs-quote" preserveAspectRatio="none" viewBox="0 0 100 93" fill="none" xmlns="http://www.w3.org/2000/svg" preser>
+          <g opacity=".4" clip-path="url(#a)" fill="var(--quoteColor)"><path d="M22.94 84H0L18.305.854H55L22.94 84ZM67.94 84H45L63.305.854H100L67.94 84Z" /></g>
+          <defs>
+            <clipPath id="a-1657"><path fill="#fff" transform="translate(0 .854)" d="M0 0h100v83.146H0z" /></clipPath>
+          </defs>
+        </svg>
+        To minimise the number of merge conflicts, vanilla CSS for these introductory pages are supplied in /assets. Should you wish to carry over the starting
+        kit styles, LESS and SASS versions are supplied outside of ./src
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!--             Side By Side Reverse             -->
+<!-- ============================================ -->
+
+<section id="sbsr-1309">
+  <div class="cs-container">
+    <!-- Left Image Section -->
+    <div class="cs-image-group">
+      <!--Floating Box-->
+      <div class="cs-box">
+        <span class="cs-desc">Building a better website, together</span>
+      </div>
+      <!--Image-->
+      <picture class="cs-picture">
+        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/tax1.jpg" />
+        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/tax1.jpg" />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/tax1.jpg"
+          alt="meeting"
+          width="630"
+          height="630"
+          aria-hidden="true"
+        />
+      </picture>
+    </div>
+    <!-- Right Content Section-->
+    <div class="cs-content">
+      <span class="cs-topper">Help & Support</span>
+      <h2 class="cs-title">Guidance every step of the way</h2>
+      <p class="cs-text">
+        Outside of a cool new feature, each branch comes with an introductory landing page (just like this one) and a branch-specific README. The landing page
+        gives you a quick overview of the branch, with the README providing more technical details should you wish to expand.
+      </p>
+      <p class="cs-text">
+        Additionally, all project-critical actions that need to be taken have a comment containing "CS-TODO". After merging in your branches, you can search the
+        codebase for "CS-TODO", find the most important changes that need to be made, and action them effortlessly.
+      </p>
+      <p class="cs-text">
+        Finally, if you are still stuck or find a bug in the kit, you can use the CTAs in the header to get directly in touch with the kit creators, or reach
+        out to a community of hundreds of other developers.
+      </p>
+      <p class="cs-text">
+        The kit continues to be supported going forward, with a complete set of tutorial videos and additional feature branches planned in the very near future.
+        Follow our subreddit to stay up to date!
+      </p>
+      <a class="cs-button-solid" aria-label="learn more about our programs" href="">Learn More</a>
+    </div>
+  </div>
+</section>
+
+
+        </main>
+        <!-- ============================================ -->
+<!--                  Footer                      -->
+<!-- ============================================ -->
+
+<section id="footer-1390">
+    <div class="cs-container">
+        <div class="cs-top">
+            <a aria-label="go back to home" class="cs-logo" href="">
+                <img class="cs-logo-img" loading="lazy" decoding="async" src="https://codestitch.app/frontend/images/logo-white.svg" alt="logo" width="209" height="40">
+            </a>
+            <ul class="cs-ul">
+                
+                
+                    <li class="cs-li">
+                        <a href="" class="cs-link">Main</a>
+                    </li>
+                
+                    <li class="cs-li">
+                        <a href="" class="cs-link">LESS</a>
+                    </li>
+                
+                    <li class="cs-li">
+                        <a href="" class="cs-link">SASS</a>
+                    </li>
+                
+                    <li class="cs-li">
+                        <a href="" class="cs-link">CMS</a>
+                    </li>
+                
+                    <li class="cs-li">
+                        <a href="" class="cs-link">Shop</a>
+                    </li>
+                
+            </ul>
         </div>
         <div class="cs-bottom">
-          <!--Social-->
-          <ul class="cs-social">
-            <li class="cs-social-li">
-              <a href="https://www.facebook.com/" class="cs-social-link" aria-label="facebook" target="_blank" rel="noopener">
-                <img
-                  class="cs-social-icon cs-default"
-                  src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/facebook-ba.svg"
-                  alt="icon"
-                  loading="lazy"
-                  decoding="async"
-                  width="12"
-                  height="12"
-                  aria-hidden="true"
-                />
-              </a>
-            </li>
-            <li class="cs-social-li">
-              <a href="https://twitter.com/" class="cs-social-link" aria-label="twitter" target="_blank" rel="noopener">
-                <img
-                  class="cs-social-icon cs-default"
-                  src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/twitter-ba.svg"
-                  alt="icon"
-                  loading="lazy"
-                  decoding="async"
-                  width="12"
-                  height="12"
-                  aria-hidden="true"
-                />
-              </a>
-            </li>
-            <li class="cs-social-li">
-              <a href="https://www.instagram.com/" class="cs-social-link" aria-label="instagram" target="_blank" rel="noopener">
-                <img
-                  class="cs-social-icon cs-default"
-                  src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/instagram-ba.svg"
-                  alt="icon"
-                  loading="lazy"
-                  decoding="async"
-                  width="12"
-                  height="12"
-                  aria-hidden="true"
-                />
-              </a>
-            </li>
-            <li class="cs-social-li">
-              <a href="https://www.youtube.com/" class="cs-social-link" aria-label="twitter" target="_blank" rel="noopener">
-                <img
-                  class="cs-social-icon cs-default"
-                  src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/youtube-ba.svg"
-                  alt="icon"
-                  loading="lazy"
-                  decoding="async"
-                  width="12"
-                  height="12"
-                  aria-hidden="true"
-                />
-              </a>
-            </li>
-          </ul>
-          <span class="cs-copyright">
-            © Copyright 2023 -
-            <a href="" class="cs-copyright-link">CodeStitch</a>
-          </span>
-          <div class="cs-flex">
-            <a href="" class="cs-copyright-link">Privacy Policy</a>
-            <span class="cs-separater">|</span>
-            <a href="" class="cs-copyright-link">Terms of Use</a>
-          </div>
+            <!--Social-->
+            <ul class="cs-social">
+                <li class="cs-social-li">
+                    <a href="https://www.facebook.com/" class="cs-social-link" aria-label="facebook" target="_blank" rel="noopener">
+                        <img class="cs-social-icon cs-default" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/facebook-ba.svg" alt="icon" loading="lazy" decoding="async" width="12" height="12" aria-hidden="true">
+                    </a>
+                </li>
+                <li class="cs-social-li">
+                    <a href="https://twitter.com/" class="cs-social-link" aria-label="twitter" target="_blank" rel="noopener">
+                        <img class="cs-social-icon cs-default" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/twitter-ba.svg" alt="icon" loading="lazy" decoding="async" width="12" height="12" aria-hidden="true">
+                    </a>
+                </li>
+                <li class="cs-social-li">
+                    <a href="https://www.instagram.com/" class="cs-social-link" aria-label="instagram" target="_blank" rel="noopener">
+                        <img class="cs-social-icon cs-default" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/instagram-ba.svg" alt="icon" loading="lazy" decoding="async" width="12" height="12" aria-hidden="true">
+                    </a>
+                </li>
+                <li class="cs-social-li">
+                    <a href="https://www.youtube.com/" class="cs-social-link" aria-label="twitter" target="_blank" rel="noopener">
+                        <img class="cs-social-icon cs-default" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/youtube-ba.svg" alt="icon" loading="lazy" decoding="async" width="12" height="12" aria-hidden="true">
+                    </a>
+                </li>
+            </ul>
+            <span class="cs-copyright">
+                © Copyright 2023 -
+                <a href="" class="cs-copyright-link">CodeStitch</a>
+            </span>
+            <div class="cs-flex">
+                <a href="" class="cs-copyright-link">Privacy Policy</a>
+                <span class="cs-separater">|</span>
+                <a href="" class="cs-copyright-link">Terms of Use</a>
+            </div>
         </div>
-      </div>
-    </section>
-  </body>
+    </div>
+</section>
+    </body>
 </html>
