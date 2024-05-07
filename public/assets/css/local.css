@@ -241,8 +241,7 @@
     #hero-1621 .cs-background img {
         width: 100%;
         height: 100%;
-        -o-object-fit: cover;
-           object-fit: cover;
+        object-fit: cover;
         position: absolute;
         top: 0;
         left: 0;
@@ -391,8 +390,7 @@
         width: 100%;
         height: 100%;
         /* makes it act like a background image */
-        -o-object-fit: cover;
-           object-fit: cover;
+        object-fit: cover;
         position: absolute;
         top: 0;
         left: 0;
@@ -717,8 +715,7 @@
     #why-choose-1657 .cs-picture img {
         width: 100%;
         height: 100%;
-        -o-object-fit: cover;
-           object-fit: cover;
+        object-fit: cover;
         position: absolute;
         top: 0;
         left: 0;
@@ -868,8 +865,7 @@
     #sbsr-1309 .cs-picture img {
         width: 100%;
         height: 100%;
-        -o-object-fit: cover;
-           object-fit: cover;
+        object-fit: cover;
         position: absolute;
         top: 0;
         left: 0;

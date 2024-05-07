@@ -1,25 +1,45 @@
-(() => {
-  // src/assets/js/dark.js
-  function enableDarkMode() {
+//
+//    The Dark Mode System
+//
+
+// helper functions to toggle dark mode
+function enableDarkMode() {
     document.body.classList.add("dark-mode");
     localStorage.setItem("theme", "dark");
-  }
-  function disableDarkMode() {
+}
+function disableDarkMode() {
     document.body.classList.remove("dark-mode");
     localStorage.setItem("theme", "light");
-  }
-  function detectColorScheme() {
+}
+
+// determines a new users dark mode preferences
+function detectColorScheme() {
+    // default to the light theme
     let theme = "light";
+
+    // check localStorage for a saved 'theme' variable. if it's there, the user has visited before, so apply the necessary theme choices
     if (localStorage.getItem("theme")) {
-      theme = localStorage.getItem("theme");
-    } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      theme = "dark";
+        theme = localStorage.getItem("theme");
     }
+    // if it's not there, check to see if the user has applied dark mode preferences themselves in the browser
+    else if (
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+        theme = "dark";
+    }
+
+    // if there is no preference set, the default of light will be used. apply accordingly
     theme === "dark" ? enableDarkMode() : disableDarkMode();
-  }
-  detectColorScheme();
-  document.getElementById("dark-mode-toggle").addEventListener("click", () => {
-    localStorage.getItem("theme") === "light" ? enableDarkMode() : disableDarkMode();
-  });
-})();
-//# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsic3JjL2Fzc2V0cy9qcy9kYXJrLmpzIl0sCiAgInNvdXJjZXNDb250ZW50IjogWyIvL1xuLy8gICAgVGhlIERhcmsgTW9kZSBTeXN0ZW1cbi8vXG5cbi8vIGhlbHBlciBmdW5jdGlvbnMgdG8gdG9nZ2xlIGRhcmsgbW9kZVxuZnVuY3Rpb24gZW5hYmxlRGFya01vZGUoKSB7XG4gICAgZG9jdW1lbnQuYm9keS5jbGFzc0xpc3QuYWRkKFwiZGFyay1tb2RlXCIpO1xuICAgIGxvY2FsU3RvcmFnZS5zZXRJdGVtKFwidGhlbWVcIiwgXCJkYXJrXCIpO1xufVxuZnVuY3Rpb24gZGlzYWJsZURhcmtNb2RlKCkge1xuICAgIGRvY3VtZW50LmJvZHkuY2xhc3NMaXN0LnJlbW92ZShcImRhcmstbW9kZVwiKTtcbiAgICBsb2NhbFN0b3JhZ2Uuc2V0SXRlbShcInRoZW1lXCIsIFwibGlnaHRcIik7XG59XG5cbi8vIGRldGVybWluZXMgYSBuZXcgdXNlcnMgZGFyayBtb2RlIHByZWZlcmVuY2VzXG5mdW5jdGlvbiBkZXRlY3RDb2xvclNjaGVtZSgpIHtcbiAgICAvLyBkZWZhdWx0IHRvIHRoZSBsaWdodCB0aGVtZVxuICAgIGxldCB0aGVtZSA9IFwibGlnaHRcIjtcblxuICAgIC8vIGNoZWNrIGxvY2FsU3RvcmFnZSBmb3IgYSBzYXZlZCAndGhlbWUnIHZhcmlhYmxlLiBpZiBpdCdzIHRoZXJlLCB0aGUgdXNlciBoYXMgdmlzaXRlZCBiZWZvcmUsIHNvIGFwcGx5IHRoZSBuZWNlc3NhcnkgdGhlbWUgY2hvaWNlc1xuICAgIGlmIChsb2NhbFN0b3JhZ2UuZ2V0SXRlbShcInRoZW1lXCIpKSB7XG4gICAgICAgIHRoZW1lID0gbG9jYWxTdG9yYWdlLmdldEl0ZW0oXCJ0aGVtZVwiKTtcbiAgICB9XG4gICAgLy8gaWYgaXQncyBub3QgdGhlcmUsIGNoZWNrIHRvIHNlZSBpZiB0aGUgdXNlciBoYXMgYXBwbGllZCBkYXJrIG1vZGUgcHJlZmVyZW5jZXMgdGhlbXNlbHZlcyBpbiB0aGUgYnJvd3NlclxuICAgIGVsc2UgaWYgKFxuICAgICAgICB3aW5kb3cubWF0Y2hNZWRpYSAmJlxuICAgICAgICB3aW5kb3cubWF0Y2hNZWRpYShcIihwcmVmZXJzLWNvbG9yLXNjaGVtZTogZGFyaylcIikubWF0Y2hlc1xuICAgICkge1xuICAgICAgICB0aGVtZSA9IFwiZGFya1wiO1xuICAgIH1cblxuICAgIC8vIGlmIHRoZXJlIGlzIG5vIHByZWZlcmVuY2Ugc2V0LCB0aGUgZGVmYXVsdCBvZiBsaWdodCB3aWxsIGJlIHVzZWQuIGFwcGx5IGFjY29yZGluZ2x5XG4gICAgdGhlbWUgPT09IFwiZGFya1wiID8gZW5hYmxlRGFya01vZGUoKSA6IGRpc2FibGVEYXJrTW9kZSgpO1xufVxuXG4vLyBydW4gb24gcGFnZSBsb2FkXG5kZXRlY3RDb2xvclNjaGVtZSgpO1xuXG4vLyBhZGQgZXZlbnQgbGlzdGVuZXIgdG8gdGhlIGRhcmsgbW9kZSBidXR0b24gdG9nZ2xlXG5kb2N1bWVudC5nZXRFbGVtZW50QnlJZChcImRhcmstbW9kZS10b2dnbGVcIikuYWRkRXZlbnRMaXN0ZW5lcihcImNsaWNrXCIsICgpID0+IHtcbiAgICAvLyBvbiBjbGljaywgY2hlY2sgbG9jYWxTdG9yYWdlIGZvciB0aGUgZGFyayBtb2RlIHZhbHVlLCB1c2UgdG8gYXBwbHkgdGhlIG9wcG9zaXRlIG9mIHdoYXQncyBzYXZlZFxuICAgIGxvY2FsU3RvcmFnZS5nZXRJdGVtKFwidGhlbWVcIikgPT09IFwibGlnaHRcIlxuICAgICAgICA/IGVuYWJsZURhcmtNb2RlKClcbiAgICAgICAgOiBkaXNhYmxlRGFya01vZGUoKTtcbn0pO1xuIl0sCiAgIm1hcHBpbmdzIjogIjs7QUFLQSxXQUFTLGlCQUFpQjtBQUN0QixhQUFTLEtBQUssVUFBVSxJQUFJLFdBQVc7QUFDdkMsaUJBQWEsUUFBUSxTQUFTLE1BQU07QUFBQSxFQUN4QztBQUNBLFdBQVMsa0JBQWtCO0FBQ3ZCLGFBQVMsS0FBSyxVQUFVLE9BQU8sV0FBVztBQUMxQyxpQkFBYSxRQUFRLFNBQVMsT0FBTztBQUFBLEVBQ3pDO0FBR0EsV0FBUyxvQkFBb0I7QUFFekIsUUFBSSxRQUFRO0FBR1osUUFBSSxhQUFhLFFBQVEsT0FBTyxHQUFHO0FBQy9CLGNBQVEsYUFBYSxRQUFRLE9BQU87QUFBQSxJQUN4QyxXQUdJLE9BQU8sY0FDUCxPQUFPLFdBQVcsOEJBQThCLEVBQUUsU0FDcEQ7QUFDRSxjQUFRO0FBQUEsSUFDWjtBQUdBLGNBQVUsU0FBUyxlQUFlLElBQUksZ0JBQWdCO0FBQUEsRUFDMUQ7QUFHQSxvQkFBa0I7QUFHbEIsV0FBUyxlQUFlLGtCQUFrQixFQUFFLGlCQUFpQixTQUFTLE1BQU07QUFFeEUsaUJBQWEsUUFBUSxPQUFPLE1BQU0sVUFDNUIsZUFBZSxJQUNmLGdCQUFnQjtBQUFBLEVBQzFCLENBQUM7IiwKICAibmFtZXMiOiBbXQp9Cg==
+}
+
+// run on page load
+detectColorScheme();
+
+// add event listener to the dark mode button toggle
+document.getElementById("dark-mode-toggle").addEventListener("click", () => {
+    // on click, check localStorage for the dark mode value, use to apply the opposite of what's saved
+    localStorage.getItem("theme") === "light"
+        ? enableDarkMode()
+        : disableDarkMode();
+});
