@@ -13,3 +13,7 @@ package = "netlify-plugin-cache"
     "public/assets/images",
     ".cache"
   ] 
+
+
+[build.environment]
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
