@@ -40,6 +40,17 @@
         <script src="/assets/js/dark.js" defer></script>
         <script src="/assets/js/nav.js" defer></script>
 
+        <!-- Shopify Scripts -->
+        <script>
+            window.shopify = window.shopify || {}
+            window.shopify.auth = {
+                store_url: "",
+                access_token: "",
+                api_verion: ""
+            }
+        </script>
+        <script src="https://sdks.shopifycdn.com/buy-button/2.4.0/buybutton.js" defer></script>
+        <script src="/assets/js/shopify.js" defer></script>
         <!-- Use a head block in any layout extending from base.html to include page-specific <head> tags. It will be included here -->
         
         
@@ -122,6 +133,100 @@
                                 
                                 <a href="/" class="cs-li-link  cs-active ">
                                     Main
+                                    
+                                </a>
+
+                                
+                                
+                            </li>
+                        
+                            
+                            
+
+                            
+                            <li class="cs-li " >
+
+                                
+                                <a href="/sass/" class="cs-li-link ">
+                                    SASS
+                                    
+                                </a>
+
+                                
+                                
+                            </li>
+                        
+                            
+                            
+
+                            
+                            <li class="cs-li " >
+
+                                
+                                <a href="/less/" class="cs-li-link ">
+                                    LESS
+                                    
+                                </a>
+
+                                
+                                
+                            </li>
+                        
+                            
+                            
+
+                            
+                            <li class="cs-li " >
+
+                                
+                                <a href="/optimization/" class="cs-li-link ">
+                                    Optimization
+                                    
+                                </a>
+
+                                
+                                
+                            </li>
+                        
+                            
+                            
+
+                            
+                            <li class="cs-li  cs-dropdown "  tabindex="0">
+
+                                
+                                <a href="/cms/" class="cs-li-link ">
+                                    CMS
+                                    
+                                        <img class="cs-drop-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fdown.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
+                                    
+                                </a>
+
+                                
+                                
+                                    <ul class="cs-drop-ul">
+                                        
+                                            <li class="cs-drop-li">
+                                                <a href="/blog/" class="cs-li-link cs-drop-link">Blog</a>
+                                            </li>
+                                        
+                                            <li class="cs-drop-li">
+                                                <a href="/menu/" class="cs-li-link cs-drop-link">Menu</a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            
+
+                            
+                            <li class="cs-li " >
+
+                                
+                                <a href="/shop/" class="cs-li-link ">
+                                    Shop
                                     
                                 </a>
 
@@ -399,6 +504,26 @@
                 
                     <li class="cs-li">
                         <a href="" class="cs-link">Main</a>
+                    </li>
+                
+                    <li class="cs-li">
+                        <a href="" class="cs-link">SASS</a>
+                    </li>
+                
+                    <li class="cs-li">
+                        <a href="" class="cs-link">LESS</a>
+                    </li>
+                
+                    <li class="cs-li">
+                        <a href="" class="cs-link">Optimization</a>
+                    </li>
+                
+                    <li class="cs-li">
+                        <a href="" class="cs-link">CMS</a>
+                    </li>
+                
+                    <li class="cs-li">
+                        <a href="" class="cs-link">Shop</a>
                     </li>
                 
             </ul>
