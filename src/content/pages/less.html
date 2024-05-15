@@ -1,83 +1,109 @@
 ---
 title: "The LESS Branch"
 description: "The LESS branch of the advanced starter kit. Provides a LESS processor to provide extra tools and functionality when writing your CSS."
-permalink: 'less/'
+permalink: "less/"
 eleventyNavigation:
-    key: 'LESS'
-    order: '200'
+  key: "About"
+  order: "200"
 ---
 
-{% extends "layouts/base.html" %}
+{% extends "layouts/base.html" %} {% block head %}
+<link rel="stylesheet" href="/assets/css/less.css" />
+{% endblock %} {% block body %}
+<!-- ============================================ -->
+<!--                   Banner                     -->
+<!-- ============================================ -->
 
-{% block head %}
-    <link rel="stylesheet" href="/assets/css/less.css">
-{% endblock %}
-
-{% block body %}
-    <!-- ============================================ -->
-    <!--                   Banner                     -->
-    <!-- ============================================ -->
-
-    <div id="banner-1402">
-        <div class="cs-container">
-            <span class="cs-int-title">LESS Branch</span>
-            <div class="cs-breadcrumbs">
-                <a href="" class="cs-link">Main</a>
-                <a href="" class="cs-link cs-active">LESS</a>
-            </div>
-        </div>
-        <!--Background Image-->
-        <picture class="cs-background">
-            <!--Mobile Image-->
-            <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/people-laughing.jpg">
-            <!--Tablet and above Image-->
-            <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/people-laughing.jpg">
-            <img decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/people-laughing.jpg" alt="people laughing" width="1280" height="568" aria-hidden="true">
-        </picture>
+<div id="banner-1402">
+  <div class="cs-container">
+    <span class="cs-int-title">About Us</span>
+    <div class="cs-breadcrumbs">
+      <a href="" class="cs-link">Main</a>
+      <a href="" class="cs-link cs-active">About</a>
     </div>
+  </div>
+  <!--Background Image-->
+  <picture class="cs-background">
+    <!--Mobile Image-->
+    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/people-laughing.jpg" />
+    <!--Tablet and above Image-->
+    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/people-laughing.jpg" />
+    <img
+      decoding="async"
+      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/people-laughing.jpg"
+      alt="people laughing"
+      width="1280"
+      height="568"
+      aria-hidden="true"
+    />
+  </picture>
+</div>
 
-    <!-- ============================================ -->
-    <!--                 Content Page                 -->
-    <!-- ============================================ -->
+<!-- ============================================ -->
+<!--                 Content Page                 -->
+<!-- ============================================ -->
 
-    <section id="content-page-1402">
-        <div class="cs-container">
-            <div class="cs-image-group">
-                <div class="cs-flex">
-                    <picture class="cs-background">
-                        <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/on-computer2.jpg">
-                        <!--Tablet and above Image-->
-                        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/on-computer2.jpg">
-                        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/on-computer2.jpg" alt="people" width="542" height="728">
-                    </picture>
-                    <div class="cs-box">
-                        <img class="cs-box-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/adv-kit-easy.svg" alt="people" width="60" height="60">
-                        <span class="cs-desc">
-                            Minimal setup required!
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="cs-content">
-                <h1 class="cs-title">LESS - Leaner Stylesheets</h1>
-                <p>This branch adds the LESS preprocessor to the kit, allowing you to make use of .less files to reduce the amount of style code written and add additional functionality upon the base CSS language.</p>
-                <p>All that we've done here is add the preprocessor to the kit, and set up the package.json npm scripts to run & watch when in development mode, and run once when in build mode. Aside from this page, there are no other added styles that come with this branch. Each branch comes with its own LESS styles in ./starter-styles. There are also no CS-TODO's to do with this one either. It just works!</p>
-                <p>As such, minimal action is needed with this one. The few steps needed (CS-TODO) are outlined below:</p>
-                <h2>If you would like to start from scratch, and not use the prebuilt pages with the kit</h2>
-                <ol>
-                    <li>Delete the ./starter-styles directory</li>
-                    <li>Clear all files in src/content, src/assets and _includes/components</li>
-                    <li>Begin</li>
-                </ol>
-                <h2>If you would like to build upon the prebuilt pages in the kit:</h2>
-                <ol>
-                    <li>Move the ./starter-styles/less files into src/assets/less</li>
-                    <li>Delete the ./starter-styles folder (now only containing SASS files)</li>
-                    <li>Begin</li>
-                </ol>
-            </div>
+<section id="content-page-1402">
+  <div class="cs-container">
+    <div class="cs-image-group">
+      <div class="cs-flex">
+        <picture class="cs-background">
+          <!--Mobile Image-->
+          <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/on-computer2.jpg" />
+          <!--Tablet and above Image-->
+          <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/on-computer2.jpg" />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/on-computer2.jpg"
+            alt="people"
+            width="542"
+            height="728"
+          />
+        </picture>
+        <div class="cs-box">
+          <img
+            class="cs-box-icon"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/adv-kit-easy.svg"
+            alt="people"
+            width="60"
+            height="60"
+          />
+          <span class="cs-desc"> Minimal setup required! </span>
         </div>
-    </section>
+      </div>
+    </div>
+    <div class="cs-content">
+      <h1 class="cs-title">When you succeed, so do we.</h1>
+      <p>
+        In 2012, Vog was founded to work with growing businesses in Canada as a local partner who could help them develop world-class mobile applications and
+        other digital products. Our process-driven team is dedicated to building products to strengthen the digital offerings for businesses in a range of
+        industries.
+      </p>
+      <p>
+        We’re not a typical software business because we don’t just chat with you for a few hours and work in the shadows to build the requested product. We
+        value our client relationships and take a deep dive into your goals, needs and vision so everyone is aligned on the design and development of every
+        application. Whether we’re working with a scrappy startup or a billion dollar international tech industry leader, we hold true to the founding principle
+        that at Vog we build more than apps, we build businesses.
+      </p>
+
+      <p>Our industry expertise and knowledge of full stack development has allowed us to bring 400+ projects to life.</p>
+      <!-- <h2>If you would like to start from scratch, and not use the prebuilt pages with the kit</h2>
+      <ol>
+        <li>Delete the ./starter-styles directory</li>
+        <li>Clear all files in src/content, src/assets and _includes/components</li>
+        <li>Begin</li>
+      </ol>
+      <h2>If you would like to build upon the prebuilt pages in the kit:</h2>
+      <ol>
+        <li>Move the ./starter-styles/less files into src/assets/less</li>
+        <li>Delete the ./starter-styles folder (now only containing SASS files)</li>
+        <li>Begin</li>
+      </ol> -->
+    </div>
+  </div>
+</section>
 
 {% endblock %}
