@@ -11,21 +11,25 @@
             {
               "item_name": "Customer Link",
               "item_description": "Pure ground beef patty topped with American cheese",
+              "item_link": "https://app.noosu.ca/",
               "item_price": null
             },
             {
               "item_name": "Androiod App",
               "item_description": "Ground beef patty topped with cheddar, bacon, onion rings, and BBQ sauce",
+              "item_link": "https://play.google.com/store/apps/details?id=com.noosu.noosu&hl=en&gl=US",
               "item_price": null
             },
             {
               "item_name": "IOS App",
               "item_description": "Ground beef patty with bacon, Cheddar Jack cheese, topped with a fried egg",
+              "item_link": "https://apps.apple.com/us/app/noosu/id6463180959",
               "item_price": null
             },
             {
               "item_name": "Noosu Official",
               "item_description": "Smashed ground beef patty on grilled marble rye bread with grilled onions and American cheese",
+              "item_link": "https://noosu.ca/",
               "item_price": null
             }
           ]

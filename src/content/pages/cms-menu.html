@@ -98,7 +98,7 @@ eleventyNavigation:
             <li class="cs-menu-item">
               <h3 class="cs-h3">
                 {% if item.item_name %}
-                <span class="cs-name">{{ item.item_name }}</span>
+                <a href="{{item.item_link}}" target="_blank" class="cs-name">{{ item.item_name }}</a>
                 {% endif %} {% if item.item_price %}
                 <span class="cs-price">{{ item.item_price }}</span>
                 {% endif %}
