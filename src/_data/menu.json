@@ -75,14 +75,14 @@
           "section_description": null,
           "items": [
             {
-              "item_name": "Transport Canada Portal",
-              "item_description": null,
+              "item_name": "Admin Link 1",
+              "item_description": "Portal used by transport Canada",
               "item_link": "https://tc.sketchbox3d.com",
               "item_price": null
             },
             {
-              "item_name": "United States Air Force Portal",
-              "item_description": null,
+              "item_name": "Admin Link 2",
+              "item_description": "Portal used by United States air force",
               "item_link": "https://usaf.sketchbox3d.com",
               "item_price": null
             }
