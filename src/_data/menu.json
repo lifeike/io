@@ -162,31 +162,30 @@
       "sections": [
         {
           "section_name": "For our Kiddos",
-          "section_description": null,
+          "section_description": "Giving people the power to drive positive change for the planet through carbon offsetting ",
           "items": [
             {
-              "item_name": "Mickey Mouse Pancake",
+              "item_name": "Customer Link",
               "item_description": "With 2 bacon or 2 links",
+              "item_link": "https://portal.karbon-x.com/",
               "item_price": null
             },
             {
-              "item_name": "French Toast Sticks",
+              "item_name": "Admin Link",
               "item_description": "With icing to dip",
+              "item_link": "https://admin-internal.karbon-x.com/signin",
               "item_price": null
             },
             {
-              "item_name": "Cheeseburger",
+              "item_name": "Androiod App",
               "item_description": "With fries",
+              "item_link": "https://play.google.com/store/apps/details?id=com.vog.karbonx&hl=en_CA&gl=US",
               "item_price": null
             },
             {
-              "item_name": "Chicken Tenders",
+              "item_name": "IOS App",
               "item_description": "With fries",
-              "item_price": null
-            },
-            {
-              "item_name": "Grilled Cheese",
-              "item_description": "With fries",
+              "item_link": "https://apps.apple.com/ca/app/karbon-x/id1673803570",
               "item_price": null
             }
           ]
