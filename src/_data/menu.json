@@ -10,25 +10,25 @@
           "items": [
             {
               "item_name": "Customer Link",
-              "item_description": "Pure ground beef patty topped with American cheese",
+              "item_description": "access healthcare services from the comfort and safety of your home.",
               "item_link": "https://app.noosu.ca/",
               "item_price": null
             },
             {
               "item_name": "Androiod App",
-              "item_description": "Ground beef patty topped with cheddar, bacon, onion rings, and BBQ sauce",
+              "item_description": "Mobile version",
               "item_link": "https://play.google.com/store/apps/details?id=com.noosu.noosu&hl=en&gl=US",
               "item_price": null
             },
             {
               "item_name": "IOS App",
-              "item_description": "Ground beef patty with bacon, Cheddar Jack cheese, topped with a fried egg",
+              "item_description": "Mobile version",
               "item_link": "https://apps.apple.com/us/app/noosu/id6463180959",
               "item_price": null
             },
             {
               "item_name": "Noosu Official",
-              "item_description": "Smashed ground beef patty on grilled marble rye bread with grilled onions and American cheese",
+              "item_description": "Noosu marketing site",
               "item_link": "https://noosu.ca/",
               "item_price": null
             }
@@ -41,22 +41,25 @@
       "course_description": "Ut sodales, ex nec tempus euismod, purus libero pulvinar tortor, vel ultrices nunc ipsum sit amet mi. Morbi dignissim convallis diam sed auctor. Maecenas vehicula quam sit amet consequat convallis.",
       "sections": [
         {
-          "section_name": "The Garden",
-          "section_description": "All salads are served with a bowl of soup and your choice of dressing",
+          "section_name": "OSL ERP",
+          "section_description": "OSL ERP system is used to manage day-to-day project activities such as jobs, locations, workers, risk management and equipments.",
           "items": [
             {
-              "item_name": "Crispy Chicken Avo Salad",
-              "item_description": "Fresh greens, breaded chicken breast, cucumber, avocado, cherry tomatoes, and cheddar cheese",
+              "item_name": "Admin Link",
+              "item_description": "OSL Admin portal",
+              "item_link": "https://admin.staging.osl.vogdevelopment.com/",
               "item_price": null
             },
             {
-              "item_name": "Greek Salad",
-              "item_description": "Fresh greens topped with cucumbers, cherry tomatoes, olives, and feta cheese",
+              "item_name": "Androiod App",
+              "item_description": "Mobile version",
+              "item_link": "",
               "item_price": null
             },
             {
-              "item_name": "Chef Salad",
-              "item_description": "Fresh greens topped with ham, turkey, American and Swiss cheese, cucumbers, cherry tomatoes, and a hard-boiled egg",
+              "item_name": "IOS App",
+              "item_description": "Mobile Version",
+              "item_lin": "",
               "item_price": null
             }
           ]
