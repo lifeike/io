@@ -95,67 +95,31 @@
       "course_description": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus aliquet ac massa sed consequat. Donec sit amet vulputate eros. Integer lorem sapien, vulputate eget lobortis ac, placerat vitae lacus.",
       "sections": [
         {
-          "section_name": "The Bev’s",
+          "section_name": "Exclusive Rewards",
           "section_description": null,
           "items": [
             {
-              "item_name": "Soft Drinks",
-              "item_description": null,
+              "item_name": "Exclusive Rewards Official",
+              "item_description": "Exclusive Rewards Marketing",
+              "item_link": "https://exclusiverewards.com/",
               "item_price": null
             },
             {
-              "item_name": "Iced Tea",
-              "item_description": null,
+              "item_name": "Exclusive Rewards",
+              "item_description": "Portal for car dealers",
+              "item_link": "https://rewards-partner.staging.exclusive-rewards.vogdevelopment.com/auth/login",
               "item_price": null
             },
             {
-              "item_name": "Sweet Tea",
-              "item_description": null,
+              "item_name": "Life Style Rewards",
+              "item_description": "Portal for life style providers",
+              "item_link": "https://lifestyle-partner.staging.exclusive-rewards.vogdevelopment.com/auth/login",
               "item_price": null
             },
             {
-              "item_name": "Orange or Apple Juice",
-              "item_description": null,
-              "item_price": null
-            },
-            {
-              "item_name": "Regular or Decaf Coffee",
-              "item_description": null,
-              "item_price": null
-            },
-            {
-              "item_name": "Hot Tea",
-              "item_description": null,
-              "item_price": null
-            },
-            {
-              "item_name": "Hot Chocolate",
-              "item_description": null,
-              "item_price": null
-            },
-            {
-              "item_name": "Milk",
-              "item_description": null,
-              "item_price": null
-            },
-            {
-              "item_name": "Chocolate Milk",
-              "item_description": null,
-              "item_price": null
-            },
-            {
-              "item_name": "Latte",
-              "item_description": "Espresso shot in steamed milk (Plain, French Vanilla, Mocha)",
-              "item_price": null
-            },
-            {
-              "item_name": "Espresso Shot",
-              "item_description": null,
-              "item_price": null
-            },
-            {
-              "item_name": "Mimosas",
-              "item_description": "Original, peach, strawberry",
+              "item_name": "Admin Link",
+              "item_description": "Admin portal",
+              "item_link": "https://super-admin.staging.exclusive-rewards.vogdevelopment.com/auth/login-page",
               "item_price": null
             }
           ]
@@ -167,32 +131,25 @@
       "course_description": "Proin porttitor ante quis magna sodales mattis. Pellentesque sed consectetur purus, eget sagittis urna. Cras fringilla, ligula at volutpat eleifend, nibh velit elementum felis, quis lobortis turpis nisi vitae augue.",
       "sections": [
         {
-          "section_name": "For our Kiddos",
-          "section_description": null,
+          "section_name": "Luxe Du Jour",
+          "section_description": "A luxury consignment and rental company that specializes in designer handbags and accessories. They offer buying, selling, consigning, renting, restoring, and accessorizing services.",
           "items": [
             {
-              "item_name": "Mickey Mouse Pancake",
-              "item_description": "With 2 bacon or 2 links",
+              "item_name": "Luxe Du Jour Purchase",
+              "item_description": "Portal for users to buy and sell",
+              "item_link": "https://ldj.com/",
               "item_price": null
             },
             {
-              "item_name": "French Toast Sticks",
-              "item_description": "With icing to dip",
+              "item_name": "Androiod App",
+              "item_description": "Portal for users to buy and sell",
+              "item_link": "https://play.google.com/store/apps/details?id=com.vog.luxedujour&hl=en&gl=US",
               "item_price": null
             },
             {
-              "item_name": "Cheeseburger",
-              "item_description": "With fries",
-              "item_price": null
-            },
-            {
-              "item_name": "Chicken Tenders",
-              "item_description": "With fries",
-              "item_price": null
-            },
-            {
-              "item_name": "Grilled Cheese",
-              "item_description": "With fries",
+              "item_name": "IOS App",
+              "item_description": "Portal for users to buy and sell",
+              "item_link": "https://apps.apple.com/ca/app/luxe-du-jour/id1636010488",
               "item_price": null
             }
           ]
