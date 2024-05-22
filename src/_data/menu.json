@@ -52,14 +52,14 @@
             },
             {
               "item_name": "Androiod App",
-              "item_description": "Mobile version",
+              "item_description": "Under Development",
               "item_link": "",
               "item_price": null
             },
             {
               "item_name": "IOS App",
-              "item_description": "Mobile Version",
-              "item_lin": "",
+              "item_description": "Under Development",
+              "item_link": "",
               "item_price": null
             }
           ]
@@ -68,40 +68,22 @@
     },
     {
       "course_name": "Sketchbox 3D",
-      "course_description": "Phasellus at facilisis nibh, nec pellentesque tellus. Quisque sem mauris, maximus ac ullamcorper a, elementum id tortor. Fusce accumsan placerat ornare.",
+      "course_description": "Sketchbox is a platform used by transport Canada and united states air force whoever wants to manage their VR session data.",
       "sections": [
         {
-          "section_name": "Just a lil’ more",
+          "section_name": "Sketchbox",
           "section_description": null,
           "items": [
             {
-              "item_name": "American Fries",
+              "item_name": "Transport Canada Portal",
               "item_description": null,
+              "item_link": "https://tc.sketchbox3d.com",
               "item_price": null
             },
             {
-              "item_name": "Hash Browns",
+              "item_name": "United States Air Force Portal",
               "item_description": null,
-              "item_price": null
-            },
-            {
-              "item_name": "French Fries",
-              "item_description": null,
-              "item_price": null
-            },
-            {
-              "item_name": "Garden Salad",
-              "item_description": null,
-              "item_price": null
-            },
-            {
-              "item_name": "Soup of the Day – Bowl",
-              "item_description": null,
-              "item_price": null
-            },
-            {
-              "item_name": "Bowl of Oatmeal",
-              "item_description": "Served with brown sugar and raisins (add fresh berries for extra)",
+              "item_link": "https://usaf.sketchbox3d.com",
               "item_price": null
             }
           ]
