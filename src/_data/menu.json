@@ -10,56 +10,32 @@
           "items": [
             {
               "item_name": "Customer Link",
-              "item_description": "access healthcare services from the comfort and safety of your home.",
+              "item_description": "Access healthcare services from the comfort and safety of your home.",
               "item_link": "https://app.noosu.ca/",
               "item_price": null
             },
             {
-              "item_name": "Androiod App",
-              "item_description": "Mobile version",
+              "item_name": "Client Androiod App",
+              "item_description": "Noosu is onsite care on-demand. The Noosu app is designed to connect you to expert professionals whenever and wherever you need 24/7. Experience the best in on-demand service and be part of this Home Care revolution.",
               "item_link": "https://play.google.com/store/apps/details?id=com.noosu.noosu&hl=en&gl=US",
               "item_price": null
             },
             {
-              "item_name": "IOS App",
-              "item_description": "Mobile version",
+              "item_name": "Client IOS App",
+              "item_description": "Noosu is onsite care on-demand. The Noosu app is designed to connect you to expert professionals whenever and wherever you need 24/7. Experience the best in on-demand service and be part of this Home Care revolution.",
               "item_link": "https://apps.apple.com/us/app/noosu/id6463180959",
+              "item_price": null
+            },
+            {
+              "item_name": "Technician Andriod App",
+              "item_description": "Streamline your caregiving with Noosu's Service Provider App. Manage shifts, view appointments, track earnings, and access support—all in one place. Experience the ease and efficiency of working like never before.",
+              "item_link": "https://play.google.com/store/apps/details?id=com.noosu.technician&hl=en&gl=US",
               "item_price": null
             },
             {
               "item_name": "Noosu Official",
               "item_description": "Noosu marketing site",
               "item_link": "https://noosu.ca/",
-              "item_price": null
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "course_name": "OSL",
-      "course_description": "Ut sodales, ex nec tempus euismod, purus libero pulvinar tortor, vel ultrices nunc ipsum sit amet mi. Morbi dignissim convallis diam sed auctor. Maecenas vehicula quam sit amet consequat convallis.",
-      "sections": [
-        {
-          "section_name": "OSL ERP",
-          "section_description": "OSL ERP system is used to manage day-to-day project activities such as jobs, locations, workers, risk management and equipments.",
-          "items": [
-            {
-              "item_name": "Admin Link",
-              "item_description": "OSL Admin portal",
-              "item_link": "https://admin.staging.osl.vogdevelopment.com/",
-              "item_price": null
-            },
-            {
-              "item_name": "Androiod App",
-              "item_description": "Under Development",
-              "item_link": "",
-              "item_price": null
-            },
-            {
-              "item_name": "IOS App",
-              "item_description": "Under Development",
-              "item_link": "",
               "item_price": null
             }
           ]
@@ -106,19 +82,19 @@
             },
             {
               "item_name": "Exclusive Rewards",
-              "item_description": "Portal for car dealers",
+              "item_description": " Exclusive Rewards allows you to show your phone for the best discounts on everything you do.",
               "item_link": "https://rewards-partner.staging.exclusive-rewards.vogdevelopment.com/auth/login",
               "item_price": null
             },
             {
               "item_name": "Life Style Rewards",
-              "item_description": "Portal for life style providers",
+              "item_description": " Exclusive Rewards allows you to show your phone for the best discounts on everything you do.",
               "item_link": "https://lifestyle-partner.staging.exclusive-rewards.vogdevelopment.com/auth/login",
               "item_price": null
             },
             {
               "item_name": "Admin Link",
-              "item_description": "Admin portal",
+              "item_description": "Portal for ER admin.",
               "item_link": "https://super-admin.staging.exclusive-rewards.vogdevelopment.com/auth/login-page",
               "item_price": null
             }
@@ -186,6 +162,36 @@
               "item_name": "IOS App",
               "item_description": "Karbon-X is an app that caters to environmentally conscious people and businesses who wish to contribute to clean energy and eco-friendly initiatives and offset their carbon emissions. The app is free to download.",
               "item_link": "https://apps.apple.com/ca/app/karbon-x/id1673803570",
+              "item_price": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "course_name": "OSL",
+      "course_description": "Ut sodales, ex nec tempus euismod, purus libero pulvinar tortor, vel ultrices nunc ipsum sit amet mi. Morbi dignissim convallis diam sed auctor. Maecenas vehicula quam sit amet consequat convallis.",
+      "sections": [
+        {
+          "section_name": "OSL ERP",
+          "section_description": "OSL ERP system is used to manage day-to-day project activities such as jobs, locations, workers, risk management and equipments.",
+          "items": [
+            {
+              "item_name": "Admin Link",
+              "item_description": "OSL Admin portal",
+              "item_link": "https://admin.staging.osl.vogdevelopment.com/",
+              "item_price": null
+            },
+            {
+              "item_name": "Androiod App",
+              "item_description": "Under Development",
+              "item_link": "",
+              "item_price": null
+            },
+            {
+              "item_name": "IOS App",
+              "item_description": "Under Development",
+              "item_link": "",
               "item_price": null
             }
           ]
