@@ -136,19 +136,19 @@
           "items": [
             {
               "item_name": "Luxe Du Jour Purchase",
-              "item_description": "Portal for users to buy and sell",
+              "item_description": "Luxe Du Jour is a Canadian-born one-stop online luxury boutique where you can shop, sell, consign, rent, restore and accessorize bags.",
               "item_link": "https://ldj.com/",
               "item_price": null
             },
             {
               "item_name": "Androiod App",
-              "item_description": "Portal for users to buy and sell",
+              "item_description": "Luxe Du Jour is the epitome of innovative luxury resale where you can shop, sell, consign, rent, lend, restore designer handbags and accessories all in one place.",
               "item_link": "https://play.google.com/store/apps/details?id=com.vog.luxedujour&hl=en&gl=US",
               "item_price": null
             },
             {
               "item_name": "IOS App",
-              "item_description": "Portal for users to buy and sell",
+              "item_description": "Luxe Du Jour is the epitome of innovative luxury resale where you can shop, sell, consign, rent, lend, restore designer handbags and accessories all in one place.",
               "item_link": "https://apps.apple.com/ca/app/luxe-du-jour/id1636010488",
               "item_price": null
             }
@@ -161,30 +161,30 @@
       "course_description": "Proin porttitor ante quis magna sodales mattis. Pellentesque sed consectetur purus, eget sagittis urna. Cras fringilla, ligula at volutpat eleifend, nibh velit elementum felis, quis lobortis turpis nisi vitae augue.",
       "sections": [
         {
-          "section_name": "For our Kiddos",
+          "section_name": "Karbon X",
           "section_description": "Giving people the power to drive positive change for the planet through carbon offsetting ",
           "items": [
             {
               "item_name": "Customer Link",
-              "item_description": "With 2 bacon or 2 links",
+              "item_description": "Choose from a variety of projects that spark your interest and offset your carbon today.",
               "item_link": "https://portal.karbon-x.com/",
               "item_price": null
             },
             {
               "item_name": "Admin Link",
-              "item_description": "With icing to dip",
+              "item_description": "Portal for Karbon-x admin.",
               "item_link": "https://admin-internal.karbon-x.com/signin",
               "item_price": null
             },
             {
               "item_name": "Androiod App",
-              "item_description": "With fries",
+              "item_description": "Karbon-X is an app that caters to environmentally conscious people and businesses who wish to contribute to clean energy and eco-friendly initiatives and offset their carbon emissions. The app is free to download.",
               "item_link": "https://play.google.com/store/apps/details?id=com.vog.karbonx&hl=en_CA&gl=US",
               "item_price": null
             },
             {
               "item_name": "IOS App",
-              "item_description": "With fries",
+              "item_description": "Karbon-X is an app that caters to environmentally conscious people and businesses who wish to contribute to clean energy and eco-friendly initiatives and offset their carbon emissions. The app is free to download.",
               "item_link": "https://apps.apple.com/ca/app/karbon-x/id1673803570",
               "item_price": null
             }
